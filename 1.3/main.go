@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	jobs := make(chan int)
+	jobs := make(chan int, 10)
 	wg := sync.WaitGroup{}
 
 	workerCount := flag.Int("w", 0, "worker count")
